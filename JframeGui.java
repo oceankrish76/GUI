@@ -7,6 +7,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JRadioButton;
 
 /**
@@ -48,7 +49,20 @@ public class JframeGui extends JFrame{
         
         JCheckBox jcheckbox = new JCheckBox("Agreed with the terms and conditions");
         //JCheckBox jcheckboxlol = new JCheckBox("I want to Pay LOL");
-
+        
+        //RADIO BUTTON
+        JRadioButton jrbm = new JRadioButton("male");
+        jrbm.setSelected(true);
+        
+        JRadioButton jrbf = new JRadioButton("female");
+        jrbf.setSelected(false);
+        //COMBOBOX
+        JComboBox jcb = new JComboBox();
+        jcb.addItem("Item 1");
+        jcb.addItem("Item 2");
+        jcb.addItem("Item 3");
+        
+        
         //create button
         JButton btn = new JButton("Submit");
         btn.setBackground(Color.BLUE);// NOt working
@@ -59,8 +73,13 @@ public class JframeGui extends JFrame{
         add(lblfn);
         add(txt);
         add(txtarea);
-        add(jcheckbox);
+        add(jcb);
+        add(jrbm);
+        
         //add(jcheckboxlol);
+        add(jrbf);
+        
+        add(jcheckbox);
         add(btn);
         //similarly create radiobuttons and so on
         //Work with events and ActionListener
